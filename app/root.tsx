@@ -6,6 +6,10 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+import { css } from "styled-system/css";
+import { Button } from "./components/ui/button";
+import "./styles/index.css";
+
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
@@ -17,6 +21,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         {children}
+        <div className={css({ background: "bg.muted" })}>coucou panda css</div>
+        <Button variant="outline" >Coucou</Button>
         <ScrollRestoration />
         <Scripts />
       </body>
