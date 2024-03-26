@@ -30,10 +30,36 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
+    // "paths": {
+    //   "@/components": [
+    //     "./app/*"
+    //   ]
+    // },
     "paths": {
-      "~/*": [
-        "./app/*"
-      ]
+      "@/components/*": [
+        "./app/components/*"
+      ],
+      "@/hooks/*": [
+        "./app/hooks/*"
+      ],
+      "@/libraries/*": [
+        "./app/libraries/*"
+      ],
+      "@/routes/*": [
+        "./app/routes/*"
+      ],
+      "@/styles-system/*": [
+        "./app/styles-system/*"
+      ],
+      "@/styles/*": [
+        "./app/styles/*"
+      ],
+      "@/types/*": [
+        "./app/types/*"
+      ],
+      "@/utils/*": [
+        "./app/utils/*"
+      ],
     },
     // Vite takes care of building everything, not tsc.
     "noEmit": true

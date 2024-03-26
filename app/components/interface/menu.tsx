@@ -1,8 +1,8 @@
+import { createStyleContext } from '@/libraries/create-style-context'
 import { Menu } from '@ark-ui/react/menu'
 import type { ComponentProps } from 'react'
 import { styled } from 'styled-system/jsx'
 import { menu } from 'styled-system/recipes'
-import { createStyleContext } from '~/libraries/create-style-context'
 
 const { withProvider, withContext } = createStyleContext(menu)
 

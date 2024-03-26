@@ -15,6 +15,7 @@
     "@ark-ui/react": "^2.2.3",
     "@formily/core": "^2.3.1",
     "@formily/react": "^2.3.1",
+    "@remix-run/css-bundle": "^2.8.1",
     "@remix-run/node": "^2.8.1",
     "@remix-run/react": "^2.8.1",
     "@remix-run/serve": "^2.8.1",

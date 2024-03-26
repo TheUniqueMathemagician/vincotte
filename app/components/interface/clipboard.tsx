@@ -1,8 +1,8 @@
+import { createStyleContext } from '@/libraries/create-style-context'
 import { Clipboard } from '@ark-ui/react/clipboard'
 import type { ComponentProps } from 'react'
 import { styled } from 'styled-system/jsx'
 import { clipboard } from 'styled-system/recipes'
-import { createStyleContext } from '~/libraries/create-style-context'
 
 const { withProvider, withContext } = createStyleContext(clipboard)
 

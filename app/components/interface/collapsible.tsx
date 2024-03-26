@@ -1,8 +1,8 @@
+import { createStyleContext } from '@/libraries/create-style-context'
 import { Collapsible } from '@ark-ui/react/collapsible'
 import type { ComponentProps } from 'react'
 import { styled } from 'styled-system/jsx'
 import { collapsible } from 'styled-system/recipes'
-import { createStyleContext } from '~/libraries/create-style-context'
 
 const { withProvider, withContext } = createStyleContext(collapsible)
 

@@ -1,8 +1,8 @@
+import { createStyleContext } from '@/libraries/create-style-context'
 import { FileUpload } from '@ark-ui/react/file-upload'
 import type { ComponentProps } from 'react'
 import { styled } from 'styled-system/jsx'
 import { fileUpload } from 'styled-system/recipes'
-import { createStyleContext } from '~/libraries/create-style-context'
 
 const { withProvider, withContext } = createStyleContext(fileUpload)
 

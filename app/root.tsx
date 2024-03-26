@@ -1,16 +1,18 @@
-import {
-  Links,
-  Meta,
-  Outlet,
-  Scripts,
-  ScrollRestoration,
-} from "@remix-run/react";
+import { cssBundleHref } from "@remix-run/css-bundle";
+import { LinksFunction } from "@remix-run/node";
+import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
+import { FunctionComponent, PropsWithChildren } from "react";
 
-import { css } from "styled-system/css";
-import { Button } from "./components/ui/button";
-import "./styles/index.css";
+import styles from "./styles/index.css";
 
-export function Layout({ children }: { children: React.ReactNode }) {
+export const links: LinksFunction = () => [
+  ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
+  { rel: "stylesheet", href: styles },
+];
+
+export const Layout: FunctionComponent<PropsWithChildren> = (props) => {
+  const { children } = props;
+
   return (
     <html lang="en">
       <head>
@@ -21,8 +23,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         {children}
-        <div className={css({ background: "bg.muted" })}>coucou panda css</div>
-        <Button variant="outline" >Coucou</Button>
         <ScrollRestoration />
         <Scripts />
       </body>
